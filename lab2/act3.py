@@ -4,7 +4,7 @@ import grovepi
 from grovepi import *
 import math
 
-button = 4 # Port for button
+button = 3 # Port for button
 sensor = 0 # Port for sensor (Analog 0)
 
 pinMode(button, "INPUT") # Assign mode for button as input
@@ -21,5 +21,6 @@ while True:
         else: # The button is in OFF position
             setRGB(255, 0,0) # Set LCD background to red
             setText("Presiona el\n boton")
+	    time.sleep(.5)
     except (IOError, TypeError) as e:
         print("Error")
